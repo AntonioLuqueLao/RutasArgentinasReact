@@ -1,0 +1,24 @@
+body {
+    height: 100%;
+}
+
+.contenedor-portada {
+    margin: 10% auto;
+    width: 50em;
+    border: solid orangered 7px;
+    height: 10em;
+    border-radius: 5px;
+    color: orangered;
+}
+
+.input-portada {
+    width: 40%;
+    padding: 10px 5px;
+}
+
+.button-portada {
+    color: white;
+    background-color: orangered;
+    border: none;
+    padding: 12px 5px;
+}
