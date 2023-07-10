@@ -1,17 +1,20 @@
 import { Route, Routes } from "react-router-dom"
 import Portada from "../paginas/Portada";
 import Ruta2 from "./Ruta2";
+import RutasPrivadas from "./rutasPrivadas";
+import RutasPublicas from "./rutasPublicas";
 
 const Ruta1=()=> {
     return (
         <Routes>
-            <Route path="/" element={
-            <Portada/>
-            }/>
-            <Route path="/*" element={
+            <Route element= {<RutasPublicas/>}>
+            <Route path="/" element={<Portada/>}/>
+            </Route>
 
-            <Ruta2/>
-            }/>
+            <Route element={<RutasPrivadas/>}>
+            <Route path="/*" element={<Ruta2/>}/>
+            </Route>
+
         </Routes>
     )
 }

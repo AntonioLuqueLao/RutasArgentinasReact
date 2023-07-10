@@ -10,7 +10,7 @@ const Ruta2=()=> {
         <>
                 <Nav/>
         <Routes>
-            <Route path="/Capital" element={<Capital/>}/>
+            <Route path="/Capital" index element={<Capital/>}/>
             <Route path="/Norte" element={<Norte/>}/>
             <Route path="/Ruta" element={<Ruta/>}/>
             <Route path="/MasInfo/:nombre" element={<MasInfo/>}/>

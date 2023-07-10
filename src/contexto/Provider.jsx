@@ -50,7 +50,7 @@ const Provider=({children})=> {
                 type: types.login
             }
             localStorage.setItem("estado", true);
-            dispatch2({type: action})
+            dispatch2({type: action.type})
         }
     }
 

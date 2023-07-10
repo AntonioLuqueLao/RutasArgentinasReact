@@ -1,14 +1,15 @@
 import { useContext } from "react"
 import Contexto from "../contexto/Contexto"
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 const RutasPrivadas=({children})=> {
 
     const {login}=useContext(Contexto);
     const estado=login.estado;
-
-    return (estado)
-    ? children
+    console.log(estado);
+/* El localstorage funciona pero el estado no cambia a true */
+    return estado
+    ? <Outlet/>
     : <Navigate to="/"/>
 }
 

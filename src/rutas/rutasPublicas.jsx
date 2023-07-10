@@ -1,13 +1,15 @@
 import { useContext } from "react"
 import Contexto from "../contexto/Contexto"
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 const RutasPublicas=({children})=> {
 
-    const {estado}=useContext(Contexto);
-
+    const {login}=useContext(Contexto);
+    const estado=login.estado;
+    console.log(estado);
+    
     return (!estado)
-    ? children
+    ? <Outlet/>
     : <Navigate to="/*"/>
 
 }
